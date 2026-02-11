@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huzaifa Telecom | Your Trusted Partner</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0a3d62;
+            --secondary: #f39c12;
+            --light: #f9f9f9;
+            --dark: #2c3e50;
+        }
+
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--primary);
+            color: white;
+            padding: 8px 5%;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Navbar with Logo */
+        header {
+            background: #fff;
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            background: var(--primary);
+            color: white;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 24px;
+        }
+
+        .logo-text h1 {
+            font-size: 22px;
+            margin: 0;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .logo-text span {
+            font-size: 12px;
+            color: var(--secondary);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            margin-left: 25px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--secondary); }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(10, 61, 98, 0.9), rgba(10, 61, 98, 0.7)), 
+                        url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .hero h2 { font-size: 48px; margin-bottom: 20px; }
+        .hero p { font-size: 20px; margin-bottom: 30px; opacity: 0.9; }
+
+        .btn-call {
+            background: var(--secondary);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        /* Offers Section */
+        .offers-section {
+            padding: 60px 5%;
+            background: #fff;
+        }
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .offer-card {
+            border: 2px dashed var(--secondary);
+            padding: 20px;
+            border-radius: 15px;
+            background: #fff9f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .offer-card h3 { color: var(--primary); margin-top: 0; }
+        .offer-badge {
+            background: var(--secondary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        /* Floating Contact */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            padding: 40px 5%;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 32px; }
+            nav { display: none; } /* মোবাইলে মেনু হাইড */
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <span><i class="fas fa-clock"></i> খোলা সকাল ৯টা - রাত ১০টা</span>
+    <span><i class="fas fa-phone-alt"></i> ০১৭৫২-৭৪৫৩০২</span>
+</div>
+
+<header>
+    <a href="#" class="logo-area">
+        <div class="logo-icon">
+            <i class="fas fa-broadcast-tower"></i>
+        </div>
+        <div class="logo-text">
+            <h1>হুজাইফা টেলিকম</h1>
+            <span>HUZAIFA TELECOM</span>
+        </div>
+    </a>
+    <nav>
+        <a href="#">হোম</a>
+        <a href="#offers">আজকের অফার</a>
+        <a href="#services">সেবাসমূহ</a>
+        <a href="#contact">যোগাযোগ</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>আপনার ডিজিটাল জীবন হোক সহজ</h2>
+    <p>সঠিক সময়ে সঠিক সেবা পাওয়াই আমাদের বৈশিষ্ট্য।</p>
+    <a href="tel:01752745302" class="btn-call"><i class="fas fa-headset"></i> এখনই কথা বলুন</a>
+</section>
+
+<div class="container" style="padding: 60px 5%;">
+    <section id="offers" class="offers-section">
+        <h2 style="text-align: center; color: var(--primary);">আজকের বিশেষ ধামাকা অফার</h2>
+        <div class="offer-grid">
+            <div class="offer-card">
+                <span class="offer-badge">HOT</span>
+                <h3>৪০ জিবি ইন্টারনেট</h3>
+                <p>৩০ দিন মেয়াদে মাত্র ৪৯৯ টাকা।</p>
+                <small>* সকল অপারেটরের জন্য প্রযোজ্য</small>
+            </div>
+            <div class="offer-card">
+                <span class="offer-badge">POPULAR</span>
+                <h3>৫০০ মিনিট টকটাইম</h3>
+                <p>যেকোনো নাম্বারে ৩০ দিন মেয়াদে ৩০৭ টাকা।</p>
+            </div>
+            <div class="offer-card">
+                <span class="offer-badge">CASHBACK</span>
+                <h3>বিকাশ ক্যাশব্যাক</h3>
+                <p>১০০০ টাকা রিচার্জে ২০ টাকা ইনস্ট্যান্ট ক্যাশব্যাক!</p>
+            </div>
+        </div>
+    </section>
+
+    <h2 style="text-align: center; margin-top: 50px; color: var(--primary);" id="services">প্রিমিয়াম সেবাসমূহ</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
+    
+    <a href="https://wa.me/8801752745302?text=আসসালামু আলাইকুম, আমি মোবাইল রিচার্জ করতে চাই।" target="_blank" style="text-decoration: none; color: inherit;">
+        <div style="background: white; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s;">
+            <i class="fas fa-bolt" style="font-size: 35px; color: var(--secondary);"></i>
+            <h3 style="margin-top: 15px;">দ্রুত রিচার্জ</h3>
+        </div>
+    </a>
+
+    <a href="https://wa.me/8801752745302?text=আসসালামু আলাইকুম, আমার ব্যাংকিং সেবা (বিকাশ/নগদ) প্রয়োজন।" target="_blank" style="text-decoration: none; color: inherit;">
+        <div style="background: white; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s;">
+            <i class="fas fa-wallet" style="font-size: 35px; color: var(--secondary);"></i>
+            <h3 style="margin-top: 15px;">ব্যাংকিং সেবা</h3>
+        </div>
+    </a>
+
+    <a href="https://wa.me/8801752745302?text=আসসালামু আলাইকুম, আমি বিদ্যুৎ বিল দিতে চাই।" target="_blank" style="text-decoration: none; color: inherit;">
+        <div style="background: white; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s;">
+            <i class="fas fa-plug" style="font-size: 35px; color: var(--secondary);"></i>
+            <h3 style="margin-top: 15px;">বিদ্যুৎ বিল</h3>
+        </div>
+    </a>
+
+</div>
+</div>
+</div>
+
+<a href="https://wa.me/8801752745302" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<section id="contact" style="padding: 60px 5%; background: #fdfdfd;">
+    <h2 style="text-align: center; color: var(--primary);">আমাদের মেসেজ পাঠান</h2>
+    <div style="max-width: 500px; margin: 0 auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        <form id="contactForm">
+            <div style="margin-bottom: 15px;">
+                <input type="text" id="userName" placeholder="আপনার নাম" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;" required>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <input type="tel" id="userPhone" placeholder="ফোন নম্বর" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;" required>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <textarea id="userMessage" placeholder="কি সেবা প্রয়োজন লিখুন..." rows="4" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box;" required></textarea>
+            </div>
+            <button type="submit" id="submitBtn" style="width: 100%; background: var(--primary); color: white; padding: 12px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px;">
+                <i class="fas fa-paper-plane"></i> মেসেজ পাঠান
+            </button>
+        </form>
+        <p id="statusMsg" style="text-align: center; margin-top: 15px; display: none; font-weight: bold;"></p>
+    </div>
+</section>
+<footer>
+    <div class="logo-area" style="justify-content: center; margin-bottom: 20px;">
+        <div class="logo-icon" style="background: var(--secondary);">
+            <i class="fas fa-broadcast-tower"></i>
+        </div>
+        <div class="logo-text" style="text-align: left;">
+            <h1 style="color: white;">হুজাইফা টেলিকম</h1>
+        </div>
+    </div>
+    <p>ঠিকানা: মেইন রোড বাজার, আপনার শহর।</p>
+    <p>&copy; ২০২৬ হুজাইফা টেলিকম। ডিজাইন বাই আপনার নাম।</p>
+</footer>
+
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="module">
+  // Firebase SDK
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+  // আপনার Firebase Config (Firebase Console থেকে এই তথ্যগুলো পরিবর্তন করে নিন)
+  const firebaseConfig = {
+  apiKey: "AIzaSyBmwthr2P1NvN0AV64Rq5y-dso4U0zGrZQ",
+  authDomain: "hozaifa-telecom.firebaseapp.com",
+  projectId: "hozaifa-telecom",
+  storageBucket: "hozaifa-telecom.firebasestorage.app",
+  messagingSenderId: "4871688088",
+  appId: "1:4871688088:web:f8132b0f2f2385539125ed"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // EmailJS ইনিশিয়েলাইজ (আপনার Public Key এখানে বসান)
+  emailjs.init("NIMnGtAaCocoKWgLL");
+
+  document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    const status = document.getElementById('statusMsg');
+    
+    const formData = {
+        from_name: document.getElementById('userName').value,
+        phone: document.getElementById('userPhone').value,
+        message: document.getElementById('userMessage').value,
+        date: new Date().toLocaleString()
+    };
+
+    btn.innerText = "পাঠানো হচ্ছে...";
+    btn.disabled = true;
+
+    try {
+        // ১. ফায়ারবেসে তথ্য জমা করা
+        await addDoc(collection(db, "customer_messages"), formData);
+        
+        // ২. আপনার মেইলে নোটিফিকেশন পাঠানো
+        // 'service_id', 'template_id' EmailJS ড্যাশবোর্ড থেকে পাবেন
+        await emailjs.send("service_40vd0xh", "template_8gxv6cm", formData);
+
+        status.innerText = "সফল হয়েছে! আপনার মেসেজটি হুজাইফা টেলিকমে পৌঁছেছে।";
+        status.style.color = "green";
+        document.getElementById('contactForm').reset();
+    } catch (error) {
+        console.error(error);
+        status.innerText = "দুঃখিত! ফায়ারবেস বা মেইল সার্ভারে সমস্যা হয়েছে।";
+        status.style.color = "red";
+    } finally {
+        status.style.display = "block";
+        btn.innerText = "মেসেজ পাঠান";
+        btn.disabled = false;
+    }
+  });
+</script>
+</html>
